@@ -17,3 +17,7 @@ makedocs(;
         "Home" => "index.md",
     ],
 )
+
+deploydocs(
+    repo = "github.com/le-schwa/Dodds-Watts_model.git",
+)
