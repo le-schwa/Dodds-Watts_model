@@ -1,5 +1,6 @@
 using Dodds_Watts_model
 using Test
+using Random
 
 @testset verbose = true "Dodds_Watts_model.jl" begin
     include("Epidemic_threshold.jl")
