@@ -1,7 +1,7 @@
-using Dodds-Watts_model
+using Dodds_Watts_model
 using Test
 
-@testset "Dodds-Watts_model.jl" begin
+@testset "Dodds_Watts_model.jl" begin
     include("Epidemic_threshold.jl")
     include("Critical_mass.jl")
     include("Heterogeneity_model.jl")

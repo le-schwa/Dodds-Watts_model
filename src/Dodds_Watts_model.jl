@@ -1,4 +1,4 @@
-module Dodds-Watts_model
+module Dodds_Watts_model
 
 import Base.+  
 +(f::Function, g::Function) = (x...) -> f(x...) + g(x...)  
