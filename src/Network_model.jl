@@ -119,6 +119,5 @@ end
 Plots an embedding of the graph g
 """
 function plot_network(g)
-    G = sgtsnepi(g)
-    display(show_embedding(G;A=Adj,mrk_size=10))
+    gplot(g)
 end

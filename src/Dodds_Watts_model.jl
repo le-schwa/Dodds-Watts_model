@@ -13,8 +13,6 @@ using Graphs
 using GraphPlot
 using Compose
 using GraphRecipes
-using SGtSNEpi
-using GLMakie
 using GraphPlot
 using LinearAlgebra
 
