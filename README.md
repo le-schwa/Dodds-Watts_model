@@ -1,4 +1,4 @@
-# Dodds-Watts_model
+# Dodds_Watts_model
 
 [![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://le-schwa.github.io/Dodds-Watts_model.jl/stable/)
 [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://le-schwa.github.io/Dodds-Watts_model.jl/dev/)
