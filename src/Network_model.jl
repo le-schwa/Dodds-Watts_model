@@ -84,7 +84,11 @@ function timestep_network(agents::Vector{Agent},N::Int64,S::Array{Int64},I::Arra
 end
 
 """
-Plots a simulation of the model spcified in version for t timesteps with an underlying network
+Plots a simulation of the network model for t timesteps, N individuals, S suscpetibles, I infected, R recoverd, exposure probability p, memory T, recovery rate r, probabiltiy imunity loss ρ and network g
+The variable version determines the underlying model:
+"etm" = epidemic threshold model
+"ciritical" = critical mass model
+"universal" = heterogeneity model
 """
 function plot_model_network(t::Int64,N::Int64,S::Int64,I::Int64,R::Int64,p::Float64,T::Int64,r::Float64,ρ::Float64,version,g) 
     Sus = [S]
@@ -116,7 +120,7 @@ end
 
 
 """
-Plots an embedding of the graph g
+Plots an embedding of the network g
 """
 function plot_network(g)
     gplot(g)

@@ -21,13 +21,23 @@ using LinearAlgebra
 
 """
 Definition of the individual agents
+
+type 1: Susceptible
+type 2: Infected
+type 3: Removed
+
+dose: Count of received dosages
+
+threshold: individual dose threshold; if the agents exceeds its threshold, it becomes infected
+
+vaccine: Vaccinated yes or no
 """
 mutable struct Agent
     id::Int
-    type::Int                   # 1-Susceptible 2-Infected 3-Removed
-    dose::Array{Float64}        # dose count
-    threshold::Float64          # dose threshold
-    vaccine::Bool               # vaccinated yes or no
+    type::Int                
+    dose::Array{Float64}       
+    threshold::Float64          
+    vaccine::Bool              
 end
 
 include("Epidemic_threshold.jl")

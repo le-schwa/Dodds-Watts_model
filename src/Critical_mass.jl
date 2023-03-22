@@ -1,5 +1,5 @@
 """
-Initializes agents for the critical mass model
+Initializes N agents with threshold d, where I are infected for the critical mass model
 """
 function initialize_cmm(N::Int64,I::Int64,d::Int64)
     agents = Agent[]
@@ -96,7 +96,7 @@ function timestep_cmm(agents::Vector{Agent},N::Int64,S::Array{Int64},I::Array{In
 end
 
 """
-Plots a simulation of the critical mass model for t timesteps
+Plots a simulation of the critical mass model for t timesteps, N individuals, S suscpetibles, I infected, R recoverd, exposure probability p, memory T, recovery rate r, probabiltiy imunity loss ρ, threshold d
 """
 function plot_model_cmm(t::Int64,N::Int64,S::Int64,I::Int64,R::Int64,p::Float64,T::Int64,r::Float64,ρ::Float64,d::Int64) 
     agents = initialize_cmm(N,I,d)
@@ -127,7 +127,7 @@ function plot_model_cmm(t::Int64,N::Int64,S::Int64,I::Int64,R::Int64,p::Float64,
 end
 
 """
-Plots the fixed point curve for the critical mass model
+Plots the fixed point curve for the critical mass model according to the memory T and threshold d
 """
 function fixed_point_curve_cmm(T::Int64,d::Int64)
     m = Array{Function}(undef,T-(d-1),1)

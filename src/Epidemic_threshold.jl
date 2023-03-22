@@ -1,5 +1,5 @@
 """
-Initializes agents for the epidemic threhsold model
+Initializes N agents, where I are infected for the epidemic threshold model
 """
 function initialize_etm(N::Int64,I::Int64)
     agents = Agent[]
@@ -97,7 +97,7 @@ function timestep_etm(agents::Vector{Agent},N::Int64,S::Array{Int64},I::Array{In
 end
 
 """
-Plots a simulation of the epidemic threshold model
+Plots a simulation of the epidemic threshold model for t timesteps, N individuals, S suscpetibles, I infected, R recoverd, exposure probability p, memory T, recovery rate r, probabiltiy imunity loss ρ
 """
 function plot_model_etm(t::Int64,N::Int64,S::Int64,I::Int64,R::Int64,p::Float64,T::Int64,r::Float64,ρ::Float64) 
     agents = initialize_etm(N,I)
@@ -119,7 +119,7 @@ end
 
 
 """
-# plots the stable fixed point curve of the Epidemic threshold model
+Plots the stable fixed point curve of the epidemic threshold model according to the memory T and recovery rate r
 """
 function fixed_point_curve_etm(T::Int64,r::Float64)
     b = zeros(100,2)
@@ -147,7 +147,7 @@ function fixed_point_curve_etm(T::Int64,r::Float64)
 end
 
 """
-# plots the corresponding ODE to the epidemic threshold model
+Plots the corresponding ODE to the epidemic threshold model with N individuals, exposure probability p and recovery rate r
 """
 function plot_ode(N::Int64,p::Float64,r::Float64)
     function sir_ode2(du,u,p,t)

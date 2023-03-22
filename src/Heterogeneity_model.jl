@@ -1,5 +1,5 @@
 """
-Initializes agents for the heterogeneity model
+Initializes N agents, where I are infected for the epidemic threhsold model. The threshold distribution is set to Gamma(1,1)
 """
 function initialize_universal(N::Int64,I::Int64)
     agents = Agent[]
@@ -18,7 +18,7 @@ end
 
 
 """
-Performs a time step for the heterogeneity model
+Performs a time step for the heterogeneity model. The dose distribution is set to LogNormal()
 """
 function timestep_universal(agents::Vector{Agent},N::Int64,S::Array{Int64},I::Array{Int64},R::Array{Int64},p::Float64,T::Int64,r::Float64,ρ::Float64)
 
@@ -97,7 +97,7 @@ function timestep_universal(agents::Vector{Agent},N::Int64,S::Array{Int64},I::Ar
 end
 
 """
-Plots a simulation of the heterogeneity model for t timesteps
+Plots a simulation of the heterogeneity model for t timesteps, N individuals, S suscpetibles, I infected, R recoverd, exposure probability p, memory T, recovery rate r, probabiltiy imunity loss ρ
 """
 function plot_model_universal(t::Int64,N::Int64,S::Int64,I::Int64,R::Int64,p::Float64,T::Int64,r::Float64,ρ::Float64) 
     agents = initialize_universal(N,I)

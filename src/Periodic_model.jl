@@ -3,7 +3,11 @@ include("Critical_mass.jl")
 include("Heterogeneity_model.jl")
 
 """
-Plots a simulation of the model spcified in version for t timesteps with an periodic distribution function p(t)
+Plots a simulation of the periodic model for t timesteps, N individuals, S suscpetibles, I infected, R recoverd, periodic exposure distribution p(t) with period P, memory T, recovery rate r, probabiltiy imunity loss ρ
+The variable version determines the underlying model:
+"etm" = epidemic threshold model
+"ciritical" = critical mass model
+"universal" = heterogeneity model
 """
 function plot_model_periodic(t::Int64,N::Int64,S::Int64,I::Int64,R::Int64,p,T::Int64,r::Float64,ρ::Float64,P,version) 
     Sus = [S]
