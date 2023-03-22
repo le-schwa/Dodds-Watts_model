@@ -1,6 +1,7 @@
 using Dodds_Watts_model
 using Test
 using Random
+using Graphs
 
 @testset verbose = true "Dodds_Watts_model.jl" begin
     include("Epidemic_threshold.jl")
