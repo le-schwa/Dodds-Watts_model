@@ -1,5 +1,5 @@
 @testset "Epidemic_threshold.jl" begin
-    init = initialize_etm(2,1)
+    init = Dodds_Watts_model.initialize_etm(2,1)
     @test init[1].id == 1
     @test init[1].type == 2
     @test init[1].dose == [1.0]
@@ -28,6 +28,6 @@
     @test etm[1][3] ≈ 0
     @test etm[3] ≈ 1
 
-    fixed_point = fixed_point_curve_etm(1,0.5)
+    fixed_point = Dodds_Watts_model.fixed_point_curve_etm(1,0.5)
     @test fixed_point[1] ≈ [0.5, 4.014300722355872e-8]
 end

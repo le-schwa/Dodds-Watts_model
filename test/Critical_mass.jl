@@ -1,5 +1,5 @@
 @testset "Critical_mass.jl" begin
-    init = initialize_cmm(2,1,3)
+    init = Dodds_Watts_model.initialize_cmm(2,1,3)
     @test init[1].id == 1
     @test init[1].type == 2
     @test init[1].dose == [3.0]
@@ -28,6 +28,6 @@
     @test cmm[1][3] ≈ 0
     @test cmm[3] ≈ 1
 
-    fixed_point = fixed_point_curve_cmm(12,5)
+    fixed_point = Dodds_Watts_model.fixed_point_curve_cmm(12,5)
     @test fixed_point[1] ≈ [0.6170221769734058, 0.8537221723887451]
 end

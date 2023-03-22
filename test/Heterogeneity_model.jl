@@ -1,7 +1,7 @@
 @testset "Heterogeneity_model.jl" begin
     Random.seed!(1234)
 
-    init = initialize_universal(2,1)
+    init = Dodds_Watts_model.initialize_universal(2,1)
     @test init[1].id == 1
     @test init[1].type == 2
     @test init[1].dose == [0.5568317224842397]

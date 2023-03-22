@@ -1,5 +1,8 @@
 module Dodds_Watts_model
 
+export initialize_cmm,timestep_cmm,plot_model_cmm,fixed_point_curve_cmm,initialize_etm,timestep_etm, plot_model_etm,fixed_point_curve_etm,plot_ode, 
+initialize_universal, timestep_universal, plot_model_universal,timestep_network, plot_model_network, plot_network, plot_model_periodic, plot_model_vacc
+
 import Base.+  
 +(f::Function, g::Function) = (x...) -> f(x...) + g(x...)  
 
@@ -15,8 +18,6 @@ using Compose
 using GraphRecipes
 using GraphPlot
 using LinearAlgebra
-
-export plot_model_cmm, plot_model_etm, plot_model_universal, plot_model_vacc, plot_model_network, plot_model_periodic
 
 """
 Definition of the individual agents
