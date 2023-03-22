@@ -19,5 +19,5 @@ makedocs(;
 )
 
 deploydocs(
-    repo = "github.com/le-schwa/Dodds-Watts_model.git",
+    repo = "github.com/le-schwa/Dodds_Watts_model.git",
 )

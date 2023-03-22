@@ -52,6 +52,6 @@ jobs:
       - run: |
           julia --project=docs -e '
             using Documenter: DocMeta, doctest
-            using Dodds-Watts_model
-            DocMeta.setdocmeta!(Dodds-Watts_model, :DocTestSetup, :(using Dodds-Watts_model); recursive=true)
-            doctest(Dodds-Watts_model)'
+            using Dodds_Watts_model
+            DocMeta.setdocmeta!(Dodds_Watts_model, :DocTestSetup, :(using Dodds_Watts_model); recursive=true)
+            doctest(Dodds_Watts_model)'
