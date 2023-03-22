@@ -1,7 +1,7 @@
 using Dodds_Watts_model
 using Test
 
-@testset "Dodds_Watts_model.jl" begin
+@testset verbose = true "Dodds_Watts_model.jl" begin
     include("Epidemic_threshold.jl")
     include("Critical_mass.jl")
     include("Heterogeneity_model.jl")
