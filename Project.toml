@@ -22,9 +22,6 @@ Roots = "f2b01f46-fcfa-551c-844a-d8ac1e96c665"
 SGtSNEpi = "e6c19c8d-e382-4a50-b2c6-174ddd647730"
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 
-[compat]
-julia = "1.6"
-
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 
